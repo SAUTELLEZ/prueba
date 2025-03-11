@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="#">Inicio</a>
+            <a href="#">About</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </header>
+    <main class="container">
+        <div class="left-section">
+            <img src="fondo.jpg" alt="emocion">
+            <img src="r.andy.jpg" alt="recuerdo">
+            <img src="randy.jpg" alt="compa">
+        </div>
+        <div class="right-section">
+            <h1>Bienvenidos a mi sitio web mis tios </h1>
+            <p>Aqui jugaremos un poco con lo que se ha aprendido estas semanas.</p>
+        </div>
+    </main>
+    
+    <div class="container">
+        <h2>¿Es Par o Impar?</h2>
+        <input type="number" id="numero" placeholder="Número">
+        <button onclick="verificarParidad()">Verificar</button>
+        <p id="resultado"></p>
+    </div>
+    <script>
+        function verificarParidad() {
+            let num = document.getElementById("numero").value;
+            num = parseInt(num);
+
+            if (isNaN(num)) {
+                document.getElementById("resultado").innerText = "Ingresa un número válido.";
+                return;
+            }
+
+            let division = num / 2;
+            let esPar = (Math.floor(division) * 2 === num); // Si el doble del entero de la división es el mismo número, es par
+
+            if (esPar) {
+                document.getElementById("resultado").innerText = num + " es un número PAR.";
+                document.getElementById("resultado").style.color = "green";
+            } else {
+                document.getElementById("resultado").innerText = num + " es un número IMPAR.";
+                document.getElementById("resultado").style.color = "red";
+            }
+        }
+    </script>
+
+    
+    <script>
+        function verificarParidad() {
+            let num = document.getElementById("numero").value;
+            num = parseInt(num);
+
+            if (isNaN(num)) {
+                document.getElementById("resultado").innerText = "Ingresa un número válido.";
+                return;
+            }
+
+            let division = num / 2;
+            let esPar = (Math.floor(division) * 2 === num); // Si el doble del entero de la división es el mismo número, es par
+
+            if (esPar) {
+                document.getElementById("resultado").innerText = num + " es un número PAR.";
+                document.getElementById("resultado").style.color = "green";
+            } else {
+                document.getElementById("resultado").innerText = num + " es un número IMPAR.";
+                document.getElementById("resultado").style.color = "red";
+            }
+        }
+    </script>
+
+</body>
+</html>
